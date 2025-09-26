@@ -16,4 +16,5 @@ class EspressOCustomer():
             "lifetime_spent": self.lifetime_spent 
         }
     
-    
+    def __repr__ (self): 
+         
