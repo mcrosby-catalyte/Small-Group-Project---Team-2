@@ -38,10 +38,9 @@ def generate_list_of_items():
 
 
 def create_transaction(count):
+    items = generate_list_of_items()
     for i in range(count):
-        purchases.append(
-            Purchase(gen.timestamps[i], "list of items", "total cost", "customer")
-        )
+        purchases.append(Purchase(gen.timestamps[i], items, "total cost", "customer"))
     return purchases
 
 
