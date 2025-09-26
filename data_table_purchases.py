@@ -30,4 +30,4 @@ def create_transaction(count):
     return purchases
 
 
-print(create_transaction(4))
+print(create_transaction(20))
