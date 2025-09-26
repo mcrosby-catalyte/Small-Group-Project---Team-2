@@ -8,24 +8,28 @@
 
 
 class bakedGood:
-    def __intit__(
-        self, name, purchasing_cost, markup_percentage, vendor_name, sale_price
+    def __init__(
+        self,
+        name,
+        purchasing_cost,
+        markup_percentage,
+        vendor_name,
     ):
         self.name = name
         self.name = markup_percentage
         self.purchasing_cost = purchasing_cost
         self.markup_percentage = vendor_name
         self.vedor_name = vendor_name
-        self.sale_price = purchasing_cost + markup_percentage
+        self.sale_price = round(purchasing_cost * (1 + markup_percentage), 2
 
     def __str__(self):
-        return f"{self.purchasing_cost}"
+        return f"{self.name} {self.sale_price}"
 
 
 cinnamon_rolls = bakedGood("bread", 5.50, 0.20, "shop")
 muffin = bakedGood("bread", 5.50, 0.20, "shop")
 cake = bakedGood("bread", 5.50, 0.20, "shop")
-croissant = bakedGood("bread", 5.50, 0.20, "shop")
+croissant = bakedGood("bread", 5.50, 0.0, "shop")
 bread = bakedGood("bread", 5.50, 0.20, "shop")
 
 print(croissant)
