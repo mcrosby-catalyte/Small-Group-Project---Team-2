@@ -23,7 +23,7 @@ class bakedGood:
         self.sale_price = round(purchasing_cost * (1 + markup_percentage), 2
 
     def __str__(self):
-        return f"{self.name} {self.sale_price}"
+        return (f"{self.name} {self.sale_price}")
 
 
 cinnamon_rolls = bakedGood("bread", 5.50, 0.20, "shop")
