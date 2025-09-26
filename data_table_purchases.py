@@ -1,0 +1,51 @@
+import timestamp_gen as gen
+
+
+class Purchase:
+
+    def __init__(
+        self,
+        date_time,
+        item_purchased,
+        total_cost,
+        customer,
+    ):
+        self.date_time = date_time
+        self.item_purchased = item_purchased
+        self.total_cost = total_cost
+        self.customer = customer
+
+    def __repr__(self):
+        return f"{self.date_time}, {self.item_purchased}, {self.total_cost}, {self.customer}\n"
+
+
+purchases = []
+
+
+def create_transaction(count):
+    for i in range(count):
+        purchases.append(
+            Purchase(gen.timestamps[i], "list of items", "total cost", "customer")
+        )
+    return purchases
+
+
+def create_new_purchace():
+    purchases.append(Purchase("date/time", "items", "cost", "customer"))
+    return purchases
+
+
+def delete_from_purchases():
+    purchases.pop()
+    return purchases
+
+
+def update_purchases(target, updated_purchase):
+    for target in purchases:
+        i = purchases.index(target)
+        purchases.pop(i)
+        purchases.insert(i, updated_purchase)
+    return purchases
+
+
+print(create_transaction(20))
