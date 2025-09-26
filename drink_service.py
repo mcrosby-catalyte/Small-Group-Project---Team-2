@@ -1,11 +1,3 @@
-drink_menu = [
-    {"drinkName": "Black Coffee", "markupPercentage": 0.30},
-    {"drinkName": "MNM Latte", "markupPrice": 0.20},
-    {"drinkName": "Espresso", "markupPrice": 0.20},
-    {"drinkName": "Hot Chocolate", "markupPrice": 0.20},
-]
-
-
 class Drinks:
 
     def __init__(self, name, ingredients, cost_to_produce, markup_percentage):
