@@ -1,4 +1,5 @@
 import timestamp_gen as gen
+import baked_goods_repository as baked
 
 
 class Purchase:
@@ -20,6 +21,11 @@ class Purchase:
 
 
 purchases = []
+
+
+def generate_list_of_items():
+    items = []
+    for i in range(random.randint)
 
 
 def create_transaction(count):
