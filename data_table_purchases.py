@@ -40,4 +40,12 @@ def delete_from_purchases():
     return purchases
 
 
+def update_purchases(target, updated_purchase):
+    for target in purchases:
+        i = purchases.index(target)
+        purchases.pop(i)
+        purchases.insert(i, updated_purchase)
+    return purchases
+
+
 print(create_transaction(20))
