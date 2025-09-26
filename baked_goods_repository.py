@@ -17,7 +17,7 @@ class bakedGood:
         allergens,
     ):
         self.name = name
-        self.markup_percentage = markup_percentage
+        self.name = markup_percentage
         self.purchasing_cost = purchasing_cost
         self.vedor_name = vendor_name
         self.sale_price = round(purchasing_cost * (1 + markup_percentage)), 2
@@ -27,10 +27,35 @@ class bakedGood:
         return f"{self.name} {self.sale_price} {self.allergens}"
 
 
-cinnamon_rolls = bakedGood("bread", 5.50, 0.20, "shop")
-muffin = bakedGood("bread", 5.50, 0.20, "shop")
-cake = bakedGood("bread", 5.50, 0.20, "shop")
-croissant = bakedGood("bread", 5.50, 0.0, "shop")
-bread = bakedGood("bread", 5.50, 0.20, "shop")
+cinnamon_rolls = bakedGood(
+    "bread",
+    5.50,
+    0.20,
+    "shop",
+)
+muffin = bakedGood(
+    "bread",
+    5.50,
+    0.20,
+    "shop",
+)
+cake = bakedGood(
+    "bread",
+    5.50,
+    0.20,
+    "shop",
+)
+croissant = bakedGood(
+    "bread",
+    5.50,
+    0.0,
+    "shop",
+)
+bread = bakedGood(
+    "bread",
+    5.50,
+    0.20,
+    "shop",
+)
 
-print(croissant)
+baked_list = [cinnamon_rolls, muffin, cake, croissant, bread]
