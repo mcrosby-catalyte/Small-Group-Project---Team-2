@@ -14,7 +14,7 @@ class DrinkName:
 
 
 americano = DrinkName("americano", ["water", "espresso"], 0.30)
-mnm_latee = DrinkName("MNM Latte", ["milk", "mnms"], 0.20)
+mnm_latee = DrinkName("Express-O Latte", ["milk", "mnms"], 0.20)
 capuccino = DrinkName("capuccino", ["espresso", "milk"], 0.25)
 espresso = DrinkName("espresso", "espresso", 0.30)
 hot_chocolate = DrinkName("hot_chocolate", ["milk", "chocolate"], 0.25)
