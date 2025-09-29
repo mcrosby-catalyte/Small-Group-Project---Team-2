@@ -1,9 +1,8 @@
 import timestamp_gen as gen
 import baked_goods_repository as baked
+import drink_repository as drink_repo
+import customers
 import random
-
-temp_customer_list = []
-temp_drinks_list = []
 
 
 class Purchase:
@@ -25,8 +24,8 @@ class Purchase:
 
 
 purchases = []
-cusomer_list = temp_customer_list
-drinks_list = temp_drinks_list
+cusomer_list = customers.customers
+drinks_list = []
 
 
 def pull_random_list_item(x):
