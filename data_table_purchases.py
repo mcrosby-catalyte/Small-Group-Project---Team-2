@@ -2,6 +2,12 @@ import timestamp_gen as gen
 import baked_goods_repository as baked
 import random
 
+temp_customer_list = []
+temp_drinks_list = []
+
+cusomer_list = temp_customer_list
+drinks_list = temp_drinks_list
+
 
 class Purchase:
 
@@ -31,16 +37,32 @@ def pull_random_list_item(x):
 
 def generate_list_of_items():
     items = []
-    for i in range(random.randint(1, (len(baked.baked_list) - 1))):
+    for goods in range(random.randint(1, (len(baked.baked_list) - 1))):
         items.append(pull_random_list_item(baked.baked_list))
+    for drink in range(random.randint(1, (len(drinks_list) - 1))):
+        items.append(pull_random_list_item(drinks_list))
 
     return items
+
+
+def get_total_cost(prices):
+    total = 0.0
+    for price in prices:
+        total += price.sales_price
+    return total
 
 
 def create_transaction(count):
     items = generate_list_of_items()
     for i in range(count):
-        purchases.append(Purchase(gen.timestamps[i], items, "total cost", "customer"))
+        purchases.append(
+            Purchase(
+                gen.timestamps[i],
+                items,
+                get_total_cost(items),
+                pull_random_list_item(cusomer_list),
+            )
+        )
     return purchases
 
 
