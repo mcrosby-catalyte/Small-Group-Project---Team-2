@@ -16,10 +16,3 @@ class DrinkService:
         for drink in self.drinks:
             if drink.name() == name:
                 return drink
-
-
-# item = DrinkService()
-
-# item.add_drink("coconut latte")
-
-# print(item.drinks)
