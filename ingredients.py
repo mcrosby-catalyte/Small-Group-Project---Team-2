@@ -42,7 +42,7 @@ class Inventory:
         return None
 
 
-# --- Example Setup ---
+# __________Example Setup
 
 inventory = Inventory()
 
