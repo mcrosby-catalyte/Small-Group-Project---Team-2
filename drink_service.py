@@ -18,8 +18,8 @@ class DrinkService:
                 return drink
 
 
-item = DrinkService()
+# item = DrinkService()
 
-item.add_drink("coconut latte")
+# item.add_drink("coconut latte")
 
-print(item.drinks)
+# print(item.drinks)
