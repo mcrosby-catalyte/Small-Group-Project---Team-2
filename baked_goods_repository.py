@@ -28,10 +28,10 @@ class bakedGood:
         return f"{self.name} {self.sale_price} {self.allergens}"
 
 
-cinnamon_rolls = bakedGood("bread", 5.50, 0.20, "shop", 10, "wheat")
-muffin = bakedGood("bread", 5.50, 0.20, "shop", 5, "wheat")
-cake = bakedGood("bread", 5.50, 0.20, "shop", 5, "wheat")
-croissant = bakedGood("bread", 5.50, 0.20, "shop", 5, "wheat")
+cinnamon_roll = bakedGood("Cinnamon roll", 5.50, 0.20, "shop", 10, "wheat")
+muffin = bakedGood("Muffin", 5.50, 0.20, "shop", 5, "wheat")
+Coffee_cake = bakedGood("Coffe Cake", 5.50, 0.20, "shop", 5, "wheat")
+croissant = bakedGood("croissant", 5.50, 0.20, "shop", 5, "wheat")
 bread = bakedGood("bread", 5.50, 0.20, "shop", 5, "wheat")
 
 
