@@ -1,5 +1,7 @@
 import timestamp_gen as gen
 import baked_goods_repository as baked
+import drink_repository as drink_repo
+import customers
 import random
 
 
@@ -22,6 +24,8 @@ class Purchase:
 
 
 purchases = []
+cusomer_list = customers.customers
+drinks_list = []
 
 
 def pull_random_list_item(x):
@@ -31,26 +35,37 @@ def pull_random_list_item(x):
 
 def generate_list_of_items():
     items = []
-    for i in range(random.randint(1, (len(baked.baked_list) - 1))):
+    for goods in range(random.randint(1, (len(baked.baked_list) - 1))):
         items.append(pull_random_list_item(baked.baked_list))
+    for drink in range(random.randint(1, (len(drinks_list) - 1))):
+        items.append(pull_random_list_item(drinks_list))
 
     return items
+
+
+def get_total_cost(prices):
+    total = 0.0
+    for price in prices:
+        total += price.sale_price
+    return total
 
 
 def create_transaction(count):
     items = generate_list_of_items()
     for i in range(count):
-        purchases.append(Purchase(gen.timestamps[i], items, "total cost", "customer"))
+        purchases.append(
+            Purchase(
+                gen.timestamps[i],
+                items,
+                get_total_cost(items),
+                pull_random_list_item(cusomer_list),
+            )
+        )
     return purchases
 
 
-def create_new_purchace():
-    purchases.append(Purchase("date/time", "items", "cost", "customer"))
-    return purchases
-
-
-def delete_from_purchases():
-    purchases.pop()
+def delete_from_purchases(entry):
+    purchases.pop(purchases.index(entry))
     return purchases
 
 
