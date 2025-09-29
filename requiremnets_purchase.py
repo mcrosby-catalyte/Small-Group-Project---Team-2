@@ -9,5 +9,8 @@ def filter_purchaces(key, target_value):
     return filtered
 
 
-def sort_purchaces(key):
-    pass
+def sort_purchaces(key, do_highest_to_lowest):
+    if do_highest_to_lowest == True:
+        pass
+    else:
+        pass

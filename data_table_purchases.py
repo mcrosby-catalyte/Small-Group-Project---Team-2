@@ -5,9 +5,6 @@ import random
 temp_customer_list = []
 temp_drinks_list = []
 
-cusomer_list = temp_customer_list
-drinks_list = temp_drinks_list
-
 
 class Purchase:
 
@@ -28,6 +25,8 @@ class Purchase:
 
 
 purchases = []
+cusomer_list = temp_customer_list
+drinks_list = temp_drinks_list
 
 
 def pull_random_list_item(x):
@@ -48,7 +47,7 @@ def generate_list_of_items():
 def get_total_cost(prices):
     total = 0.0
     for price in prices:
-        total += price.sales_price
+        total += price.sale_price
     return total
 
 
@@ -63,11 +62,6 @@ def create_transaction(count):
                 pull_random_list_item(cusomer_list),
             )
         )
-    return purchases
-
-
-def create_new_purchace():
-    purchases.append(Purchase("date/time", "items", "cost", "customer"))
     return purchases
 
 
