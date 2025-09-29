@@ -65,8 +65,8 @@ def create_transaction(count):
     return purchases
 
 
-def delete_from_purchases():
-    purchases.pop()
+def delete_from_purchases(entry):
+    purchases.pop(purchases.index(entry))
     return purchases
 
 
