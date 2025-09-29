@@ -29,6 +29,10 @@ class LoyaltyProgram:
         print(f"SMS sent to {self.customer.phone}: {message}")
 
 
+
+#CRUD FUNCTIONALITY  
+
+
 all_customers = []  
 
 
@@ -73,6 +77,6 @@ def retrieve_loyalty_member_information():
     if results:
         return results
     else:
-        return "No customers with names starting A-H found."
+        return "I said NO NO NOOOOO Customer name starts with the letters A-H."
     
-    
+
