@@ -20,6 +20,6 @@ class DrinkService:
 
 # item = DrinkService()
 
-# item.add_drink("coconut latte")
+# item.all_drinks()
 
 # print(item.drinks)
