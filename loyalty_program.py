@@ -16,9 +16,7 @@ class LoyaltyProgram:
         self.points += int(amount * self.points_per_dollar)
 
     def send_email_promo(self, message: str):
-        # Placeholder for real email integration
         print(f"Email sent to {self.customer.email}: {message}")
 
     def send_sms_promo(self, message: str):
-        # Placeholder for real SMS integration
         print(f"SMS sent to {self.customer.phone}: {message}")
