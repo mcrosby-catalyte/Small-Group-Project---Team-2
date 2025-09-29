@@ -21,14 +21,11 @@ class bakedGood:
         self.markup_percentage = markup_percentage
         self.purchasing_cost = purchasing_cost
         self.vedor_name = vendor_name
-        self.sale_price = round(purchasing_cost * (1 + markup_percentage))
+        self.sale_price = sale_price
         self.allergens = allergens
 
     def __str__(self):
         return f"{self.name} {self.sale_price} {self.allergens}"
-
-
-# round(purchasing_cost * (1 + markup_percentage))
 
 
 cinnamon_rolls = bakedGood(
@@ -36,7 +33,7 @@ cinnamon_rolls = bakedGood(
     5.50,
     0.20,
     "shop",
-    round(purchasing_cost * (1 + markup_percentage)),
+    0,
     "wheat",
 )
 muffin = bakedGood("bread", 5.50, 0.20, "shop", 5, "wheat")
