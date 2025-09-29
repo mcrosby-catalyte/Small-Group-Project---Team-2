@@ -8,6 +8,12 @@
 
 
 class bakedGood:
+    """
+    Gives attributes to food items.
+    Returns:
+        Food name price and allergen.
+    """
+
     def __init__(
         self,
         name,
@@ -25,16 +31,16 @@ class bakedGood:
         self.allergens = allergens
 
     def __str__(self):
-        return f"{self.name} {self.sale_price} {self.allergens}"
+        return f"{self.name}\nsale price: {self.sale_price}\nallergen: {self.allergens}"
 
 
 cinnamon_roll = bakedGood("Cinnamon roll", 5.50, 0.20, "shop", 10, "wheat")
 muffin = bakedGood("Muffin", 5.50, 0.20, "shop", 5, "wheat")
-Coffee_cake = bakedGood("Coffe Cake", 5.50, 0.20, "shop", 5, "wheat")
+coffee_cake = bakedGood("Coffe Cake", 5.50, 0.20, "shop", 5, "wheat")
 croissant = bakedGood("croissant", 5.50, 0.20, "shop", 5, "wheat")
 bread = bakedGood("bread", 5.50, 0.20, "shop", 5, "wheat")
 
 
-baked_list = [cinnamon_rolls, muffin, cake, croissant, bread]
+baked_list = [cinnamon_roll, muffin, coffee_cake, croissant, bread]
 
-print(baked_list)
+print(coffee_cake)
