@@ -13,6 +13,10 @@ class DrinkName:
         return round(purchasing_cost * (1 + self.markup_percentage), 2)
 
 
-black_coffee = DrinkName("black coffee", ["water", "coffee"], 0.30)
+americano = DrinkName("americano", ["water", "espresso"], 0.30)
 mnm_latee = DrinkName("MNM Latte", ["milk", "mnms"], 0.20)
 capuccino = DrinkName("capuccino", ["espresso", "milk"], 0.25)
+espresso = DrinkName("espresso", "espresso", 0.30)
+hot_chocolate = DrinkName("hot_chocolate", ["milk", "chocolate"], 0.25)
+green_tea = DrinkName("green tea", ["water", "tea"], 0.30)
+mocha = DrinkName("mocha", ["milk", "espresso", "chocolate"], 0.30)
