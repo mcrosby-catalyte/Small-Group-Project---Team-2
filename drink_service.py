@@ -1,12 +1,25 @@
-class Drinks:
+from drink_repository import DrinkRepository
+from ingredients import Ingredients
 
-    def __init__(self, name, ingredients, cost_to_produce, markup_percentage):
-        self.name = name
-        self.ingredients = ingredients
-        self.produce_cost = cost_to_produce
-        self.markup = markup_percentage
 
-    def calculate_sale_price(self):
-        sale_price = purchasing_cost + (
-            purchasing_cost * drink_menu["markupPercentage"]
-        )
+class DrinkService:
+    def __init__(self):
+        self.drinks = []
+
+    def add_drink(self, drink):
+        self.drinks.append(drink)
+
+    def all_drinks(self):
+        return self.drinks
+
+    def find_drinks_by_name(self, name):
+        for drink in self.drinks:
+            if drink.name() == name:
+                return drink
+
+
+item = DrinkService()
+
+item.add_drink("coconut latte")
+
+print(item.drinks)

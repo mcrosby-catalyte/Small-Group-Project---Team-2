@@ -1,21 +1,18 @@
-drink_menu = [
-    {"drinkName": "Black Coffee", "markupPercentage": 0.30},
-    {"drinkName": "MNM Latte", "markupPrice": 0.20},
-    {"drinkName": "Espresso", "markupPrice": 0.20},
-    {"drinkName": "Hot Chocolate", "markupPrice": 0.20},
-    {"drinkName": "Anericano", "markupPrice": 0.30},
-]
-
-
-class Drinks:
-
-    def __init__(self, name, ingredients, cost_to_produce, markup_percentage):
+class DrinkName:
+    def __init__(self, name, ingredients, markup_percentage):
         self.name = name
         self.ingredients = ingredients
-        self.produce_cost = cost_to_produce
         self.markup = markup_percentage
+        self.cost_to_produce = self.calculate_cost_to_produce()
+        self.sale_price = self.calculate_sale_price()
+
+    def calculate_cost_to_produce(self):
+        return sum(ingredient.purchasing_cost for ingredient in self.ingredients)
 
     def calculate_sale_price(self):
-        sale_price = purchasing_cost + (
-            purchasing_cost * drink_menu["markupPercentage"]
-        )
+        return round(purchasing_cost * (1 + self.markup_percentage), 2)
+
+
+black_coffee = DrinkName("black coffee", ["water", "coffee"], 0.30)
+mnm_latee = DrinkName("MNM Latte", ["milk", "mnms"], 0.20)
+capuccino = DrinkName("capuccino", ["espresso", "milk"], 0.25)
