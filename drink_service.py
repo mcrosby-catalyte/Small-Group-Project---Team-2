@@ -1,5 +1,4 @@
 from drink_repository import DrinkRepository
-from ingredients import Ingredients
 
 
 class DrinkService:

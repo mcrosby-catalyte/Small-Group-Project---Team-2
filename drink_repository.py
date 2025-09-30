@@ -1,16 +1,22 @@
+from ingredients import ingredient
+
+
 class DrinkName:
     def __init__(self, name, ingredients, markup_percentage):
         self.name = name
         self.ingredients = ingredients
-        self.markup = markup_percentage
+        self.markup_percentage = markup_percentage
         self.cost_to_produce = self.calculate_cost_to_produce()
         self.sale_price = self.calculate_sale_price()
+
+    def __repr__(self):
+        return f"Coffee name: {self.name}, Ingredients: {self.ingredients}, Markup percentage: {self.markup_percentage}"
 
     def calculate_cost_to_produce(self):
         return sum(ingredient.purchasing_cost for ingredient in self.ingredients)
 
     def calculate_sale_price(self):
-        return round(purchasing_cost * (1 + self.markup_percentage), 2)
+        return round(ingredient.purchasing_cost * (1 + self.markup_percentage), 2)
 
 
 americano = DrinkName("americano", ["water", "espresso"], 0.30)
