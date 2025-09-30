@@ -1,4 +1,4 @@
-from ingredients import Ingredients
+from ingredients import ingredient
 
 
 class DrinkName:
@@ -13,7 +13,7 @@ class DrinkName:
         return sum(ingredient.purchasing_cost for ingredient in self.ingredients)
 
     def calculate_sale_price(self):
-        return round(purchasing_cost * (1 + self.markup_percentage), 2)
+        return round(ingredient.purchasing_cost * (1 + self.markup_percentage), 2)
 
 
 americano = DrinkName("americano", ["water", "espresso"], 0.30)
