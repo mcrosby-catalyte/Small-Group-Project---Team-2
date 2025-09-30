@@ -1,7 +1,5 @@
 class ingredient:
-    """
-    Represents an ingredient in a coffee/tea shop.
-    """
+    """Represents an ingredient in a coffee/tea shop."""
 
     def __init__(self, name, purchasing_cost, unit_amount, unit_of_measure):
         self.name = name
@@ -19,9 +17,7 @@ class ingredient:
 
 
 class Inventory:
-    """
-    Manages a collection of ingredients.
-    """
+    """Manages a collection of ingredients."""
 
     def __init__(self):
         self.ingredients = []
