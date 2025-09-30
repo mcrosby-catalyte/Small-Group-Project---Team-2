@@ -46,21 +46,21 @@ class Inventory:
 
 inventory = Inventory()
 
-# Coffee Ingredients
+# coffee ingredients
 inventory.add_ingredient(ingredient("Coffee beans (espresso roast)", 15, 1, "lb"))
 inventory.add_ingredient(ingredient("Whole milk", 4, 1, "gallon"))
 inventory.add_ingredient(ingredient("Oat milk", 5, 1, "quart"))
 inventory.add_ingredient(ingredient("Pumpkin puree (fall seasonal)", 4, 15, "oz"))
 
-# Tea Ingredients
+# tea ingredients
 inventory.add_ingredient(ingredient("Black tea leaves (English Breakfast)", 9, 1, "lb"))
 inventory.add_ingredient(ingredient("Green tea leaves (Sencha)", 11, 1, "lb"))
 inventory.add_ingredient(ingredient("Chai tea concentrate (spiced)", 8, 32, "oz"))
 inventory.add_ingredient(ingredient("Matcha powder", 18, 100, "g"))
 inventory.add_ingredient(ingredient("Apple cider (fall seasonal)", 6, 64, "oz"))
 
-#-----------------
-#   Example Usage 
+
+#________Example Usage 
 print("All Ingredients:")
 for ing in inventory.list_ingredients():
     print(ing)
