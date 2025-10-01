@@ -25,7 +25,15 @@ class Purchase:
 
 purchases = []
 cusomer_list = customers.customers
-drinks_list = []
+drinks_list = [
+    drink_repo.americano,
+    drink_repo.capuccino,
+    drink_repo.espresso,
+    drink_repo.green_tea,
+    drink_repo.hot_chocolate,
+    drink_repo.mnm_latee,
+    drink_repo.mocha,
+]
 
 
 def pull_random_list_item(x):
